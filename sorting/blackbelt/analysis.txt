@@ -1,0 +1,49 @@
+/*Honor Pledge: I pledge that I have neither given, nor received any help on this assignment.
+ *
+ * Ehtsham Nisar
+ */
+
+
+Big-O analysis 
+
+1. Bubble Sort
+Assume that the length of array is N
+Assume that the comparision and swap is O(1)
+The bubble sort algorithm use one outer for loop and one inner for loop.
+The outer loop run N - 1 times
+i = 0: the inner loop run N - 1 times
+i = 1: the inner loop run N - 2 times
+...
+i = N - 2: the inner loop run 1 times
+
+The total is 1 + 2 + ... + N - 1 = N * (N - 1) / 2
+So the complexity is O(N^2)
+
+2. Insertion sort
+
+Assume that the length of array is N
+Assume that the comparision and swap is O(1)
+The bubble sort algorithm use one for loop and one inner while loop.
+The outer loop run N - 1 times
+i = 1: the inner while run maximum 1 times
+i = 1: the inner while run maximum 2 times
+...
+i = N - 1: the inner while run maximum N - 1 times
+
+The total is 1 + 2 + ... + N - 1 = N * (N - 1) / 2
+So the complexity is O(N^2)
+
+3. Quick sort
+
+Assume that the length of array is N
+Assume that the comparision and swap is O(1)
+
+The partition function for array with length = L takes O(L) 
+because it uses one for loop that run from start + 1 to end
+
+The quickSort is recursive function. 
+If array has length is N, takes O(N) + 2 * the complexity of quickSort on N / 2
+(because it calls recursive function on the left part and on the right part with length = N/2)
+It is O(N) + O(N) + ...
+The level of recursive function is logN because for each call, the length is reduced a half.
+So the total complexity is O(NlogN)
